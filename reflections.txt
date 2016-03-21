@@ -1,0 +1,19 @@
+How does your gem take advantage of Ruby’s metaprogramming capabilities?
+I decided to create a new hash in the String class, containing the different
+available colors. Like this, I think it could be easy to add new available colors
+later.
+I used this hash with a define_method call, in order to create a method
+within the String class for each color.
+
+How long did you spend working on this project?
+I have been working on this project for two hours.
+
+What was the most rewarding challenge you conquered?
+I had a difficult time to really understand the concept of metaprogrammming. It was
+something I was not used to. I was very happy to see my program working after a few
+tries.
+
+Where do you still have room to grow?
+As I said earlier, I am just beginning with metaprogrammming. I think for now I am
+just seeing the emerged part of the iceberg and I have to go deeper in this.
+To sum up, I need to practice more !

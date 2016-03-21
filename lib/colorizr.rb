@@ -1,5 +1,5 @@
 class String
-  @@colors = {
+  @colors = {
                   red:        31,
                   green:      32,
                   yellow:     33,
@@ -12,21 +12,22 @@ class String
               }
 
   def self.create_colors
-    @@colors.each do |color|
-      self.send(:define_method, "#{color.key.to_s}") do
-        "\e[#{color.value.to_s}m" + self.to_s + "\e[0m"
+    @colors.each do |key,value|
+      self.send(:define_method, "#{key.to_s}") do
+        "\e[#{value.to_s}m" + self.to_s + "\e[0m"
       end
     end
   end
 
   String.create_colors
 
-  def self.sample_colors
-    @@colors.each do |color|
-      puts "This is " + send(color.key.to_s,color.key.to_s)
+  def self.colors
+    @colors.keys
   end
 
-  def self.colors
-    @@colors.keys
+  def self.sample_colors
+    String.colors.each do |color|
+      puts "This is " + color.to_s.instance_eval(color.to_s)
+    end
   end
 end
