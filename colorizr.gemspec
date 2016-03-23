@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'colorizr'
-  s.version     = '0.0.2'
-  s.date        = '2016-03-21'
+  s.version     = '0.0.3'
+  s.date        = '2016-03-22'
   s.summary     = "String Colorization Gem"
   s.description = "A simple gem to colorize terminal output"
   s.authors     = ["Arnaud Léonard"]
